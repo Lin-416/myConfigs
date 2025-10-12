@@ -1,0 +1,13 @@
+vim.lsp.config("lua_ls", {})
+vim.lsp.config("clangd", {})
+vim.lsp.config("ts_ls", {})
+vim.lsp.config("vue_ls", {})
+vim.lsp.config("rust_analyzer", {})
+vim.lsp.config("tailwindcss", {})
+
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("clangd")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("vue_ls")
+vim.lsp.enable("rust_analyzer")
+vim.lsp.enable("tailwindcss")
