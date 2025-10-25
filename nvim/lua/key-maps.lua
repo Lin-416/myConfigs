@@ -21,5 +21,5 @@ vim.api.nvim_set_keymap('v', '<C-c>', '"+y', opts)
 vim.api.nvim_set_keymap('v', '<C-x>', '"+d', opts)
 
 -- 添加 cmd+/ 快速注释
-vim.api.nvim_set_keymap('n', '<D-/>', 'gcc', { noremap = false, silent = true })
-vim.api.nvim_set_keymap('v', '<D-/>', 'gc', { noremap = false, silent = true })
+vim.api.nvim_set_keymap('n', '<C-/>', 'gcc', { noremap = false, silent = true })
+vim.api.nvim_set_keymap('v', '<C-/>', 'gc', { noremap = false, silent = true })

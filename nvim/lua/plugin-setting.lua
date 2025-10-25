@@ -10,13 +10,6 @@ require("nvim-tree").setup()
 
 require("telescope").setup()
 
--- 使用mini.indentscope插件（缩进线）
-require('barbar').setup({
-	-- 配置缓冲区显示插件
-	animation = false,
-	auto_hide = true
-})
-
 -- 使用leetcode.nvim
 require("leetcode").setup({
 	cn = { -- leetcode.cn
@@ -30,13 +23,13 @@ require("leetcode").setup({
 		cache = vim.fn.expand("~/CODE/leetcode/.cache"),
 	},
 
-	injector = { ---@type table<lc.lang, lc.inject>
+	injector = {
 		["cpp"] = {
 			imports = function()
 				-- return a different list to omit default imports
-				return { "using namespace std;" }
+				return { "#include <stack>", "#include <queue>", "#include <vector>", "#include <string>",
+					"using namespace std;" }
 			end,
-			after = "int main() {}",
 		},
 	},
 })
@@ -99,7 +92,7 @@ require("dashboard").setup({
 
 		shortcut = {
 			{
-				icon = '  ',
+				icon = ' ',
 				desc = 'Projects',
 				group = 'Label',
 				key = 'p',
@@ -111,6 +104,13 @@ require("dashboard").setup({
 				group = 'Label',
 				key = 'l',
 				action = 'Telescope find_files cwd=/Users/lijianlin/CODE/learning find_command=fd,--type,d,--max-depth,1',
+			},
+			{
+				icon = '󱃖 ',
+				desc = 'LeetCode',
+				group = 'Label',
+				key = 'c',
+				action = 'Leet',
 			},
 			{
 				icon = ' ',
@@ -149,12 +149,9 @@ require("noice").setup({
 
 require("toggleterm").setup({
 	direction = "float",
-	float_opts = { border = "curved" }
+	float_opts = { border = "curved" },
+	start_in_insert = true
 })
-
-vim.cmd([[
-cnoreabbrev <expr> term (getcmdtype() == ':' && getcmdline() ==# 'term') ? 'ToggleTerm' : 'term'
-]])
 
 require("render-markdown").setup()
 
