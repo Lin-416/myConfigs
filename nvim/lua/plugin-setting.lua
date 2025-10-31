@@ -119,6 +119,13 @@ require("dashboard").setup({
 				key = 'd',
 				action = 'cd /Users/lijianlin/.config/nvim | NvimTreeOpen',
 			},
+			{
+				icon = '󰈆 ',
+				desc = 'Quit',
+				group = 'Label',
+				key = 'q',
+				action = 'q',
+			},
 		},
 	},
 })
