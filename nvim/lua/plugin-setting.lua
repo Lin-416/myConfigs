@@ -100,16 +100,9 @@ require("dashboard").setup({
 			},
 			{
 				icon = ' ',
-				desc = 'Learning',
-				group = 'Label',
-				key = 'l',
-				action = 'Telescope find_files cwd=/Users/lijianlin/CODE/learning find_command=fd,--type,d,--max-depth,1',
-			},
-			{
-				icon = '󱃖 ',
 				desc = 'LeetCode',
 				group = 'Label',
-				key = 'c',
+				key = 'l',
 				action = 'Leet',
 			},
 			{
